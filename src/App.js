@@ -47,7 +47,7 @@ class App extends Component {
       types: this.state.types,
       parts: this.state.parts,
     }
-    console.log(contextValue)
+    
     return (
       <div className="App">
         <Context.Provider value={contextValue}>
