@@ -8,7 +8,7 @@ import Types from './Types/Types'
 import BikeType from './Types/BikeType'
 import Parts from './Parts/Parts'
 import Safety from './Safety/Safety'
-import FindShops from './FindShops/FindShops'
+import FindShopsForm from './FindShops/FindShopsForm'
 import PageNotFound from './PageNotFound/PageNotFound'
 import './App.css'
 
@@ -62,7 +62,7 @@ class App extends Component {
                 <Route path='/types/:id' component={BikeType} />
                 <Route path='/parts' component={Parts} />
                 <Route path='/safety' component={Safety} />
-                <Route path='/find-shops' component={FindShops} />
+                <Route path='/find-shops' component={FindShopsForm} />
                 <Route component={PageNotFound} />
               </Switch>
             </main>

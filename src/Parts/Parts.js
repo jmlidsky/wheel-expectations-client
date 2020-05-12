@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Context from '../Context'
-import BikePart from './BikePart'
+// import BikePart from './BikePart'
 import './Parts.css';
 
 class Parts extends Component {
@@ -9,36 +9,36 @@ class Parts extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      open: false
+      parts: [],
+      currentPartIndex: null
     }
   }
 
-  render() {
-    const { parts } = this.context
+  handleButtonClick(index) {
+    this.setState({ currentPartIndex: index })
+  }
 
+  renderPart(part, index, currentPartIndex) {
     return (
-      <div className="parts">
-        <h2>Bike Parts</h2>
-        <div className="part-list">
-          {parts.map(part =>
-            <BikePart
-
-              key={part.id}
-              part_name={part.part_name}
-              part_description={part.part_description}
-            />
-          )}
-        </div>
-
-        {/* <div className="part-list">
-          {parts.map(part =>
-            <div className="part" key={part.id}>
-              <div className="part-header">{part.part_name}</div>
-              <div className="part-body">{part.part_description}</div>
-            </div>)}
-        </div> */}
+      <div className="bike-part" key={part.id}>
+        <button className="part-name" key={index} onClick={() => this.handleButtonClick(index)}>
+          {part.part_name}
+        </button>
+        {(currentPartIndex === index) && <div className="part-description">{part.part_description}</div>}
       </div>
-    );
+    )
+  }
+
+  render() {
+    const { currentPartIndex } = this.state
+    const { parts } = this.context;
+    return (
+      <div>
+        {parts.map((part, index) =>
+        this.renderPart(part, index, currentPartIndex)
+        )}
+      </div>
+    )
   }
 }
 

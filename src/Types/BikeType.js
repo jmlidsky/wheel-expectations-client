@@ -7,18 +7,18 @@ class BikeType extends Component {
     render() {
         const { types } = this.context
         const bikeId = this.props.match.params.id
-        const selectedBike = types.find(type =>
-            type.id === bikeId)
-
+        const selectedBike = types.find(type => {
+            return type.id === bikeId
+        })
         // null check
-        return selectedBike 
-        ? (
-            <div className="bike-body">
-                <h2>{selectedBike.bike_name}</h2>
-                <p>{selectedBike.bike_description}</p>
-            </div>
-        )
-        : <></>
+        return selectedBike
+            ? (
+                <div className="bike-body">
+                    <h2>{selectedBike.bike_name}</h2>
+                    <p>{selectedBike.bike_description}</p>
+                </div>
+            )
+            : null
     }
 }
 
