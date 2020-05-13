@@ -5,7 +5,7 @@ class Hero extends Component {
     return (
       <div className="hero">
         <h2>For the beginner or the advanced rider.</h2>
-        <p>A place to education yourself about bikes & bike safety.</p>
+        <p>A place to educate yourself about bikes & bike safety.</p>
       </div>
     );
   }
