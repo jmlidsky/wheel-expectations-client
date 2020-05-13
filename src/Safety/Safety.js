@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactPlayer from "react-player"
 import './Safety.css';
 
 class Safety extends Component {
@@ -9,9 +10,10 @@ class Safety extends Component {
         <section className="helmets">
           <h3>Helmets</h3>
           <ul>
-            <li>Always wear a <a href="https://www.youtube.com/watch?v=o61feDjSQ_0" target="_blank" rel="noopener noreferrer">properly fitted helmet</a> that has been certified by the Consumer Product Safety Commission (CPSC).</li>
+            <li>Always wear a properly fitted helmet that has been certified by the Consumer Product Safety Commission (CPSC).</li>
             <li>Replace any helmet that is damaged or has been involved in a crash.</li>
           </ul>
+          <ReactPlayer url="https://www.youtube.com/watch?v=o61feDjSQ_0" controls />
         </section>
         <section className="be-seen">
           <h3>Be Seen</h3>

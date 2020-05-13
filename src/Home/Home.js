@@ -3,7 +3,7 @@ import Hero from '../Hero/Hero'
 import TypesHero from '../Hero/TypesHero'
 import PartsHero from '../Hero/PartsHero'
 import SafetyHero from '../Hero/SafetyHero'
-import FindShopsHero from '../Hero/FindShopsHero'
+// import FindShopsHero from '../Hero/FindShopsHero'
 import './Home.css';
 
 class Home extends Component {
@@ -22,9 +22,9 @@ class Home extends Component {
                 <section> 
                     <SafetyHero />
                 </section>
-                <section> 
+                {/* <section> 
                     <FindShopsHero />
-                </section>
+                </section> */}
             </div>
         );
     }

@@ -8,17 +8,17 @@ class Nav extends Component {
             <nav className="navigation">
                 <ul className='nav-list'>
                     <li>
-                        <Link to='/types'>Types</Link>
+                        <Link to='/types' className="nav-link">Types</Link>
                     </li>
                     <li>
-                        <Link to='/parts'>Parts</Link>
+                        <Link to='/parts' className="nav-link">Parts</Link>
                     </li>
                     <li>
-                        <Link to='/safety'>Safety & Etiquette</Link>
+                        <Link to='/safety' className="nav-link">Safety & Etiquette</Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link to='/find-shops'>Find Shops</Link>
-                    </li>
+                    </li> */}
                 </ul>
             </nav>
         );
