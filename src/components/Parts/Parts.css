@@ -1,0 +1,23 @@
+.bike-part {
+    padding: 5px 0px;
+}
+
+button.part-name {
+    margin-bottom: 5px;
+    border: 1px solid #e6e6e6;
+    padding: 8px;
+    width: 250px;
+    height: 40px;
+    background-color: white;
+    font-size: .9em;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.part-description {
+    font-size: .9em;
+    line-height: 1.5em;
+    margin-top: 5px;
+    text-align: left;
+}

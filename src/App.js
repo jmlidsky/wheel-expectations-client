@@ -1,50 +1,53 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Context from './Context'
-import config from './config'
-import Header from './Header/Header'
-import Home from './Home/Home'
-import Types from './Types/Types'
-import BikeType from './Types/BikeType'
-import Parts from './Parts/Parts'
-import Safety from './Safety/Safety'
-// import FindShopsForm from './FindShops/FindShopsForm'
-import PageNotFound from './PageNotFound/PageNotFound'
+// import config from './config'
+import DATA from './DummyData'
+import Header from './components/Header/Header'
+import Home from './components/Home/Home'
+import BikeFilterForm from './components/Bikes/BikeFilterForm'
+import BikeInfo from './components/Bikes/BikeInfo'
+import Parts from './components/Parts/Parts'
+import Safety from './components/Safety/Safety'
+import FindShopsForm from './components/FindShops/FindShopsForm'
+import PageNotFound from './components/PageNotFound/PageNotFound'
 import './App.css'
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      types: [],
-      parts: [],
+    //   bikes: [],
+    //   parts: [],
+      bikes: DATA.bikes,
+      parts: DATA.parts
     }
   }
 
-  componentDidMount() {
-    Promise.all([
-      fetch(`${config.API_ENDPOINT}/types`),
-      fetch(`${config.API_ENDPOINT}/parts`)
-    ])
-      .then(([typesRes, partsRes]) => {
-        if (!typesRes.ok)
-          return typesRes.json().then(e => Promise.reject(e));
-        if (!partsRes.ok)
-          return partsRes.json().then(e => Promise.reject(e));
+  // componentDidMount() {
+  //   Promise.all([
+  //     fetch(`${config.API_ENDPOINT}/bikes`),
+  //     fetch(`${config.API_ENDPOINT}/parts`)
+  //   ])
+  //     .then(([bikesRes, partsRes]) => {
+  //       if (!bikesRes.ok)
+  //         return bikesRes.json().then(e => Promise.reject(e));
+  //       if (!partsRes.ok)
+  //         return partsRes.json().then(e => Promise.reject(e));
 
-        return Promise.all([typesRes.json(), partsRes.json()]);
-      })
-      .then(([types, parts]) => {
-        this.setState({ types, parts });
-      })
-      .catch(error => {
-        console.error({ error });
-      });
-  }
+  //       return Promise.all([bikesRes.json(), partsRes.json()]);
+  //     })
+  //     .then(([bikes, parts]) => {
+  //       this.setState({ bikes, parts });
+  //     })
+  //     .catch(error => {
+  //       console.error({ error });
+  //     });
+  // }
 
   render() {
     const contextValue = {
-      types: this.state.types,
+      bikes: this.state.bikes,
       parts: this.state.parts,
     }
     
@@ -58,11 +61,11 @@ class App extends Component {
             <main className='main'>
               <Switch>
                 <Route exact path='/' component={Home} />
-                <Route exact path='/types' component={Types} />
-                <Route path='/types/:id' component={BikeType} />
+                <Route exact path='/bikes' component={BikeFilterForm} />
+                <Route path='/bikes/:id' component={BikeInfo} />
                 <Route path='/parts' component={Parts} />
                 <Route path='/safety' component={Safety} />
-                {/* <Route path='/find-shops' component={FindShopsForm} /> */}
+                <Route path='/find-shops' component={FindShopsForm} />
                 <Route component={PageNotFound} />
               </Switch>
             </main>

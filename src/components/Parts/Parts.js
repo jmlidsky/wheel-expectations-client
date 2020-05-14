@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Context from '../Context'
-// import BikePart from './BikePart'
+import Context from '../../Context'
 import './Parts.css';
 
 class Parts extends Component {
@@ -10,9 +9,18 @@ class Parts extends Component {
     super(props)
     this.state = {
       parts: [],
+      status: "Essential",
       currentPartIndex: null
     }
   }
+
+  handleStatusFilter = (filter) => {
+    this.setState({
+      status: filter
+    })
+    console.log(filter)
+  }
+
 
   handleButtonClick(index) {
     this.setState({ currentPartIndex: index })
@@ -32,10 +40,22 @@ class Parts extends Component {
   render() {
     const { currentPartIndex } = this.state
     const { parts } = this.context;
+    const filteredParts = parts.filter((part) => {
+      return part.status.includes(this.state.status)
+    })
+
     return (
       <div>
-        {parts.map((part, index) =>
-        this.renderPart(part, index, currentPartIndex)
+        <h2>Bike Anatomy 101</h2>
+        <form>
+          <label htmlFor="status">Filter by:</label>
+          <select onChange={e => this.handleStatusFilter(e.target.value)}>
+            <option value="Essential">Essential Parts</option>
+            <option value="Optional">Non-Essential Parts</option>
+          </select>
+        </form>
+        {filteredParts.map((part, index) =>
+          this.renderPart(part, index, currentPartIndex)
         )}
       </div>
     )

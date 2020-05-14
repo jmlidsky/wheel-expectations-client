@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import config from '../config'
+import config from '../../config'
 import './FindShopsForm.css';
 
 const createURL = (location, sort_by) => {

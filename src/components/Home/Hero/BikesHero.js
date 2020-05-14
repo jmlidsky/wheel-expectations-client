@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-class TypesHero extends Component {
+class BikesHero extends Component {
   render() {
     return (
-      <div className="types-hero">
+      <div className="bikes-hero">
         <h2>
-          <Link to='/types'>Types of Bikes</Link>
+          <Link to='/bikes'>Bike Guide</Link>
         </h2>
         <p>In the market for a bike, but don't know which type to buy?</p>
         <p>Find the right one for you!</p>
@@ -15,4 +15,4 @@ class TypesHero extends Component {
   }
 }
 
-export default TypesHero;
+export default BikesHero;

@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import Context from '../Context'
-import './BikeType.css';
+import Context from '../../Context'
+import './BikeInfo.css';
 
-class BikeType extends Component {
+class BikeInfo extends Component {
     static contextType = Context
+    
     render() {
-        const { types } = this.context
+        const { bikes } = this.context
         const bikeId = this.props.match.params.id
-        const selectedBike = types.find(type => {
-            return type.id === bikeId
+        const selectedBike = bikes.find(bike => {
+            return bike.id === bikeId
         })
         // null check
         return selectedBike
@@ -22,4 +23,4 @@ class BikeType extends Component {
     }
 }
 
-export default BikeType;
+export default BikeInfo;

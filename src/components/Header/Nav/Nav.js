@@ -8,7 +8,7 @@ class Nav extends Component {
             <nav className="navigation">
                 <ul className='nav-list'>
                     <li>
-                        <Link to='/types' className="nav-link">Types</Link>
+                        <Link to='/bikes' className="nav-link">Bike Guide</Link>
                     </li>
                     <li>
                         <Link to='/parts' className="nav-link">Parts</Link>

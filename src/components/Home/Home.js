@@ -1,30 +1,31 @@
 import React, { Component } from 'react';
-import Hero from '../Hero/Hero'
-import TypesHero from '../Hero/TypesHero'
-import PartsHero from '../Hero/PartsHero'
-import SafetyHero from '../Hero/SafetyHero'
-// import FindShopsHero from '../Hero/FindShopsHero'
+import BikesHero from './Hero/BikesHero'
+import PartsHero from './Hero/PartsHero'
+import SafetyHero from './Hero/SafetyHero'
+import FindShopsHero from './Hero/FindShopsHero'
 import './Home.css';
 
 class Home extends Component {
+
     render() {
         return (
             <div className="home">
                 <section>
-                    <Hero />
+                    <h2>For the beginner or the advanced rider.</h2>
+                    <p>A place to educate yourself about bikes & bike safety.</p>
                 </section>
                 <section>
-                    <TypesHero />
+                    <BikesHero />
                 </section>
                 <section>
                     <PartsHero />
                 </section>
-                <section> 
+                <section>
                     <SafetyHero />
                 </section>
-                {/* <section> 
+                <section>
                     <FindShopsHero />
-                </section> */}
+                </section>
             </div>
         );
     }
