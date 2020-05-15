@@ -1,0 +1,19 @@
+.home-header {
+    margin: 10px 0px;
+}
+
+.home-section-container {
+    display: flex;
+    flex-direction: column;
+}
+
+section.hero {
+    border: 1px solid #e6e6e6;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}

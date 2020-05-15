@@ -1,12 +1,12 @@
-.bike-filter-form-header {
+.parts-filter-form-header {
     margin: 10px 0px;
 }
 
-.bike-filter-form {
+.parts-filter-form {
     margin-bottom: 10px;
 }
 
 select {
     border: 1px solid #e6e6e6;
-    width: 100px;
+    width: 150px;
 }

@@ -1,8 +1,8 @@
-.bike-part {
+.parts-filter-list-item {
     padding: 5px 0px;
 }
 
-button.part-name {
+.part-name-button {
     margin-bottom: 5px;
     border: 1px solid #e6e6e6;
     padding: 8px;

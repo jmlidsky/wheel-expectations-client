@@ -1,0 +1,26 @@
+.safety-header {
+    margin: 10px 0px;
+}
+
+.safety-section-container {
+    display: flex;
+    flex-direction: column;
+}
+
+section.safety {
+    border: 1px solid #e6e6e6;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.safety-list {
+    list-style-type: none;
+}
+
+.link-target {
+    font-weight: bold;
+}
+
+.link-target:hover {
+    color: blue;
+}

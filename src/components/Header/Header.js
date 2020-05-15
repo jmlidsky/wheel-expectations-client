@@ -8,7 +8,7 @@ class Header extends Component {
     return (
       <div className="header">
           <h1>
-              <Link to='/' className='title'>Wheel Expectations</Link>
+              <Link to="/" className="title">Wheel Expectations</Link>
           </h1>
           <Nav />
       </div>

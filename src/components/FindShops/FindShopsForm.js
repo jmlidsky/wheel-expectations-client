@@ -13,8 +13,8 @@ class FindShopsForm extends Component {
         super(props)
         this.state = {
             businesses: [],
-            location:'',
-            sort_by: 'best_match',
+            location:" ",
+            sort_by: "best_match",
         }
     }
 
@@ -25,10 +25,10 @@ class FindShopsForm extends Component {
         )
 
         const options = {
-            method: 'GET',
+            method: "GET",
             headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${config.API_KEY}`
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${config.API_KEY}`
             }
         }
 
@@ -36,7 +36,7 @@ class FindShopsForm extends Component {
             .then(response => {
                 console.log(response)
                 if (!response.ok) {
-                    throw new Error('Something went wrong, please try again later.')
+                    throw new Error("Something went wrong, please try again later.")
                 }
                 return response.json();
             })
@@ -68,8 +68,8 @@ class FindShopsForm extends Component {
 
     render() {
         return (
-            <div className="find-shops-form">
-                <form onSubmit={this.handleSubmit}>
+            <div className="find-shops-form-container">
+                <form className="find-shops-form" onSubmit={this.handleSubmit}>
                     <label htmlFor="find-shops">FindShops</label>
                     <input
                         type="text"
@@ -78,14 +78,14 @@ class FindShopsForm extends Component {
                         placeholder="Enter Location"
                         onChange={this.handleLocationChange}
                     />
-                    <label htmlFor="sort-by">Sort By:</label>
+                    <label htmlFor="sort-by-filter">Sort By:</label>
                     <select onChange={e => this.handleSortByFilter(e.target.value)}>
-                        <option>best_match</option>
-                        <option>rating</option>
-                        <option>review_count</option>
-                        <option>distance</option>
+                        <option value="best_match">Best Match</option>
+                        <option value="rating">Rating</option>
+                        <option value="review_count">Review Count</option>
+                        <option value="distance">Distance</option>
                     </select>
-                    <button type="submit">Let's Roll!</button>
+                    <button type="submit" className="submit-button">Let's Roll!</button>
                 </form>
             </div>
         );

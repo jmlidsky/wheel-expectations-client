@@ -7,7 +7,7 @@ import Header from './components/Header/Header'
 import Home from './components/Home/Home'
 import BikeFilterForm from './components/Bikes/BikeFilterForm'
 import BikeInfo from './components/Bikes/BikeInfo'
-import Parts from './components/Parts/Parts'
+import PartsFilterForm from './components/Parts/PartsFilterForm'
 import Safety from './components/Safety/Safety'
 import FindShopsForm from './components/FindShops/FindShopsForm'
 import PageNotFound from './components/PageNotFound/PageNotFound'
@@ -54,18 +54,18 @@ class App extends Component {
     return (
       <div className="App">
         <Context.Provider value={contextValue}>
-          <div className='content' aria-live='polite'>
+          <div className="content" aria-live="polite">
             <header>
               <Header />
             </header>
-            <main className='main'>
+            <main className="main">
               <Switch>
-                <Route exact path='/' component={Home} />
-                <Route exact path='/bikes' component={BikeFilterForm} />
-                <Route path='/bikes/:id' component={BikeInfo} />
-                <Route path='/parts' component={Parts} />
-                <Route path='/safety' component={Safety} />
-                <Route path='/find-shops' component={FindShopsForm} />
+                <Route exact path="/" component={Home} />
+                <Route exact path="/bikes" component={BikeFilterForm} />
+                <Route path="/bikes/:id" component={BikeInfo} />
+                <Route path="/parts" component={PartsFilterForm} />
+                <Route path="/safety" component={Safety} />
+                <Route path="/find-shops" component={FindShopsForm} />
                 <Route component={PageNotFound} />
               </Switch>
             </main>

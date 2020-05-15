@@ -1,0 +1,19 @@
+.bike-filter-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.bike-filter-list-item {
+    border: 1px solid #e6e6e6;
+    margin-bottom: 5px;
+}
+
+a.bike-name {
+    font-weight: bold;
+    height: 100px;
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -6,7 +6,7 @@ class BikesHero extends Component {
     return (
       <div className="bikes-hero">
         <h2>
-          <Link to='/bikes'>Bike Guide</Link>
+          <Link to="/bikes">Bike Guide</Link>
         </h2>
         <p>In the market for a bike, but don't know which type to buy?</p>
         <p>Find the right one for you!</p>

@@ -27,8 +27,8 @@ class BikeFilterForm extends Component {
     })
 
     return (
-      <div className="bike-filter">
-        <h2>What type of bike are you looking for?</h2>
+      <div className="bike-filter-form-container">
+        <h2 className="bike-filter-form-header">What type of bike are you looking for?</h2>
         <form className="bike-filter-form">
           <label htmlFor="category">Choose a Category:</label>
           <select onChange={e => this.handleCategoryFilter(e.target.value)}>

@@ -6,7 +6,7 @@ class FindShopsHero extends Component {
     return (
       <div className="find-shops-hero">
         <h2>
-          <Link to='/find-shops'>Find Shops</Link>
+          <Link to="/find-shops">Find Shops</Link>
         </h2>
         <p>Search for a local shop near you.</p>
       </div>

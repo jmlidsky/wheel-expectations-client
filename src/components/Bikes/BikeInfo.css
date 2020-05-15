@@ -1,0 +1,14 @@
+img {
+    width: 100%;
+}
+
+.go-back-button {
+    margin: 20px 0px;
+    border: 1px solid #e6e6e6;
+    padding: 8px;
+    background-color: white;
+    font-size: .9em;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
