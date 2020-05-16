@@ -10,20 +10,13 @@ class BikeFilterForm extends Component {
     super(props)
     this.state = {
       bikes: [],
-      category: " ",
     }
-  }
-
-  handleCategoryFilter = (filter) => {
-    this.setState({
-      category: filter
-    })
   }
 
   render() {
     const { bikes } = this.context
     const filteredBikes = bikes.filter((bike) => {
-      return bike.bike_category.includes(this.state.category)
+      return bike.bike_category.includes(this.context.category)
     })
 
     return (
@@ -31,7 +24,7 @@ class BikeFilterForm extends Component {
         <h2 className="bike-filter-form-header">What type of bike are you looking for?</h2>
         <form className="bike-filter-form">
           <label htmlFor="category">Choose a Category:</label>
-          <select onChange={e => this.handleCategoryFilter(e.target.value)}>
+          <select className="selectCategory" onChange={e => this.context.setCategory(e.target.value)}>
             <option value=" "></option>
             <option value="Road">Road</option>
             <option value="Mountain">Mountain</option>

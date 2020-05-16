@@ -10,6 +10,7 @@ class Header extends Component {
           <h1>
               <Link to="/" className="title">Wheel Expectations</Link>
           </h1>
+          <h2>A place to educate yourself about bikes & bike safety.</h2>
           <Nav />
       </div>
     );

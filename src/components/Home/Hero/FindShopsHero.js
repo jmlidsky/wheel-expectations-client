@@ -4,12 +4,10 @@ import { Link } from 'react-router-dom'
 class FindShopsHero extends Component {
   render() {
     return (
-      <div className="find-shops-hero">
-        <h2>
-          <Link to="/find-shops">Find Shops</Link>
-        </h2>
+      <Link to="/find-shops" className="find-shops-hero">
+        <h2>Find Shops</h2>
         <p>Search for a local shop near you.</p>
-      </div>
+      </Link>
     );
   }
 }

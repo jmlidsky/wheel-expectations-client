@@ -17,8 +17,16 @@ section.safety {
     list-style-type: none;
 }
 
+.safety-list li {
+    padding: 10px 0px;
+    margin-left: 20px;
+    list-style-type: square;
+}
+
 .link-target {
     font-weight: bold;
+    color: black;
+    text-decoration: none;
 }
 
 .link-target:hover {

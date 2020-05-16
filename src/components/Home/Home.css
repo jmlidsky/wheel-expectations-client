@@ -1,8 +1,5 @@
-.home-header {
+.home-container {
     margin: 10px 0px;
-}
-
-.home-section-container {
     display: flex;
     flex-direction: column;
 }
@@ -13,7 +10,12 @@ section.hero {
     padding: 5px;
 }
 
-a {
+section.hero:hover {
+    border: 2px solid #e6e6e6;
+}
+
+section.hero a {
     color: black;
     text-decoration: none;
 }
+

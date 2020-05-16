@@ -20,8 +20,15 @@ class App extends Component {
     //   bikes: [],
     //   parts: [],
       bikes: DATA.bikes,
-      parts: DATA.parts
+      parts: DATA.parts,
+      category: " ",
     }
+  }
+
+  setCategory = (filter) => {
+    this.setState({
+      category: filter
+    })
   }
 
   // componentDidMount() {
@@ -49,6 +56,8 @@ class App extends Component {
     const contextValue = {
       bikes: this.state.bikes,
       parts: this.state.parts,
+      setCategory: this.setCategory,
+      category: this.state.category,
     }
     
     return (

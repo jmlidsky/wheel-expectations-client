@@ -10,25 +10,19 @@ class Home extends Component {
     render() {
         return (
             <div className="home-container">
-                <div className="home-header">
-                    <h2>For the beginner or the advanced rider.</h2>
-                    <p>A place to educate yourself about bikes & bike safety.</p>
-                </div>
-                <div className="home-section-container">
-                    <section className="hero">
-                        <BikesHero />
-                    </section>
-                    <section className="hero">
-                        <PartsHero />
-                    </section>
-                    <section className="hero">
-                        <SafetyHero />
-                    </section>
-                    {/* <section className="hero">
+                <section className="hero">
+                    <BikesHero />
+                </section>
+                <section className="hero">
+                    <PartsHero />
+                </section>
+                <section className="hero">
+                    <SafetyHero />
+                </section>
+                {/* <section className="hero">
                     <FindShopsHero />
                 </section> */}
-                </div>
-            </div >
+            </div>
         );
     }
 }
