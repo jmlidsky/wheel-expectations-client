@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react'
 import config from '../../config'
-import './FindShopsForm.css';
+import './FindShopsForm.css'
 
 const createURL = (location, sort_by) => {
     const address = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?";
@@ -29,9 +29,12 @@ class FindShopsForm extends Component {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": `Bearer ${config.API_KEY}`
+                "x-requested-with": "xhr",
+                "Authorization": `Bearer ${config.YELP_API_KEY}`, 
             }
         }
+
+        console.log(config.YELP_API_KEY)
 
         fetch(fullURL, options)
             .then(response => {
