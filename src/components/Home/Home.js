@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import BikesHero from './Hero/BikesHero'
 import PartsHero from './Hero/PartsHero'
 import SafetyHero from './Hero/SafetyHero'
-// import FindShopsHero from './Hero/FindShopsHero'
+import FindShopsHero from './Hero/FindShopsHero'
 import './Home.css';
 
 class Home extends Component {
@@ -19,9 +19,9 @@ class Home extends Component {
                 <section className="hero">
                     <SafetyHero />
                 </section>
-                {/* <section className="hero">
+                <section className="hero">
                     <FindShopsHero />
-                </section> */}
+                </section>
             </div>
         );
     }

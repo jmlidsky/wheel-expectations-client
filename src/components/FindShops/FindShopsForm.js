@@ -1,9 +1,10 @@
+
 import React, { Component } from 'react'
 import config from '../../config'
 import './FindShopsForm.css';
 
 const createURL = (location, sort_by) => {
-    const address = "https://api.yelp.com/v3/businesses/search?";
+    const address = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?";
     const url = `${address}term=bike+shop&location=${location}&radius=24140&sort_by=${sort_by}`;
     return url;
 }
@@ -35,9 +36,9 @@ class FindShopsForm extends Component {
         fetch(fullURL, options)
             .then(response => {
                 console.log(response)
-                if (!response.ok) {
-                    throw new Error("Something went wrong, please try again later.")
-                }
+                // if (!response.ok) {
+                //     throw new Error("Something went wrong, please try again later.")
+                // }
                 return response.json();
             })
             .then(data => {
