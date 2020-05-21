@@ -7,10 +7,11 @@ class BikeInfo extends Component {
 
     render() {
         const { bikes } = this.context
-        const bikeId = this.props.match.params.id
+        const bikeId = + this.props.match.params.id
         const selectedBike = bikes.find(bike => {
             return bike.id === bikeId
         })
+
         // null check
         return selectedBike
             ? (

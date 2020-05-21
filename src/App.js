@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Context from './Context'
-// import config from './config'
-import DATA from './DummyData'
+import config from './config'
+// import DATA from './DummyData'
 import Header from './components/Header/Header'
 import Home from './components/Home/Home'
 import BikeFilterForm from './components/Bikes/BikeFilterForm'
@@ -17,10 +17,10 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-    //   bikes: [],
-    //   parts: [],
-      bikes: DATA.bikes,
-      parts: DATA.parts,
+      bikes: [],
+      parts: [],
+      // bikes: DATA.bikes,
+      // parts: DATA.parts,
       category: " ",
     }
   }
@@ -31,26 +31,26 @@ class App extends Component {
     })
   }
 
-  // componentDidMount() {
-  //   Promise.all([
-  //     fetch(`${config.API_ENDPOINT}/bikes`),
-  //     fetch(`${config.API_ENDPOINT}/parts`)
-  //   ])
-  //     .then(([bikesRes, partsRes]) => {
-  //       if (!bikesRes.ok)
-  //         return bikesRes.json().then(e => Promise.reject(e));
-  //       if (!partsRes.ok)
-  //         return partsRes.json().then(e => Promise.reject(e));
+  componentDidMount() {
+    Promise.all([
+      fetch(`${config.API_ENDPOINT}/api/bikes`),
+      fetch(`${config.API_ENDPOINT}/api/parts`)
+    ])
+      .then(([bikesRes, partsRes]) => {
+        if (!bikesRes.ok)
+          return bikesRes.json().then(e => Promise.reject(e));
+        if (!partsRes.ok)
+          return partsRes.json().then(e => Promise.reject(e));
 
-  //       return Promise.all([bikesRes.json(), partsRes.json()]);
-  //     })
-  //     .then(([bikes, parts]) => {
-  //       this.setState({ bikes, parts });
-  //     })
-  //     .catch(error => {
-  //       console.error({ error });
-  //     });
-  // }
+        return Promise.all([bikesRes.json(), partsRes.json()]);
+      })
+      .then(([bikes, parts]) => {
+        this.setState({ bikes, parts });
+      })
+      .catch(error => {
+        console.error({ error });
+      });
+  }
 
   render() {
     const contextValue = {
