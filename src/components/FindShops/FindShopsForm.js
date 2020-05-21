@@ -62,6 +62,7 @@ class FindShopsForm extends Component {
     }
 
     render() {
+        const isEnabled = this.state.location.length > 0
         return (
             <div className="find-shops-form-container">
                 <h2 className="find-shops-form-header">Find Shops Near You</h2>
@@ -71,10 +72,11 @@ class FindShopsForm extends Component {
                         type="text"
                         name="find-shops"
                         className="find-shops-input"
-                        placeholder="90210"
+                        placeholder="City, State, or Zip Code"
                         onChange={this.handleLocationChange}
+                        required
                     />
-                    <button type="submit" className="search-button">Search</button>
+                    <button type="submit" className="search-button" disabled={!isEnabled}>Search</button>
                 </form>
                 <ShopResultsList results={this.state.businesses} />
             </div>
