@@ -5,12 +5,11 @@
 }
 
 .bike-filter-list-item {
-    border: 1px solid #e6e6e6;
     margin-bottom: 5px;
+    border: 1px solid #e6e6e6;
 }
 
 a.bike-name {
-    font-weight: bold;
     height: 100px;
     padding: 5px;
     width: 100%;

@@ -11,7 +11,7 @@ class Nav extends Component {
                         <Link to="/bikes" className="nav-link">Bike Guide</Link>
                     </li>
                     <li>
-                        <Link to="/parts" className="nav-link">Parts</Link>
+                        <Link to="/parts" className="nav-link">Bike Parts</Link>
                     </li>
                     <li>
                         <Link to="/safety" className="nav-link">Safety & Etiquette</Link>

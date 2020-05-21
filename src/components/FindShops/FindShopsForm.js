@@ -1,11 +1,12 @@
 
 import React, { Component } from 'react'
 import config from '../../config'
+import ShopResultsList from './ShopResultsList'
 import './FindShopsForm.css'
 
 const createURL = (location, sort_by) => {
     const address = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?";
-    const url = `${address}term=bike+shop&location=${location}&radius=24140&sort_by=${sort_by}`;
+    const url = `${address}term=bike+shop&location=${location}&radius=24140`;
     return url;
 }
 
@@ -14,15 +15,13 @@ class FindShopsForm extends Component {
         super(props)
         this.state = {
             businesses: [],
-            location:" ",
-            sort_by: "best_match",
+            location: " ",
         }
     }
 
     handleSearch = () => {
         const fullURL = createURL(
-            this.state.location,
-            this.state.sort_by
+            this.state.location
         )
 
         const options = {
@@ -30,15 +29,13 @@ class FindShopsForm extends Component {
             headers: {
                 "Content-Type": "application/json",
                 "x-requested-with": "xhr",
-                "Authorization": `Bearer ${config.YELP_API_KEY}`, 
+                "Authorization": `Bearer ${config.REACT_APP_YELP_API_KEY}`,
             }
         }
 
-        console.log(config.YELP_API_KEY)
-
         fetch(fullURL, options)
             .then(response => {
-                console.log(response)
+                // console.log(response)
                 // if (!response.ok) {
                 //     throw new Error("Something went wrong, please try again later.")
                 // }
@@ -49,7 +46,7 @@ class FindShopsForm extends Component {
                     businesses: data.businesses
                 })
 
-                console.log(data.businesses)
+                // console.log(data.businesses)
             });
     }
 
@@ -64,33 +61,22 @@ class FindShopsForm extends Component {
         })
     }
 
-    handleSortByFilter = (filter) => {
-        this.setState({
-            sort_by: filter
-        })
-    }
-
     render() {
         return (
             <div className="find-shops-form-container">
+                <h2 className="find-shops-form-header">Find Shops Near You</h2>
                 <form className="find-shops-form" onSubmit={this.handleSubmit}>
-                    <label htmlFor="find-shops">FindShops</label>
+                    <label htmlFor="enter your location">Enter Your Location</label>
                     <input
                         type="text"
                         name="find-shops"
-                        id="find-shops"
-                        placeholder="Enter Location"
+                        className="find-shops-input"
+                        placeholder="90210"
                         onChange={this.handleLocationChange}
                     />
-                    <label htmlFor="sort-by-filter">Sort By:</label>
-                    <select onChange={e => this.handleSortByFilter(e.target.value)}>
-                        <option value="best_match">Best Match</option>
-                        <option value="rating">Rating</option>
-                        <option value="review_count">Review Count</option>
-                        <option value="distance">Distance</option>
-                    </select>
-                    <button type="submit" className="submit-button">Let's Roll!</button>
+                    <button type="submit" className="search-button">Search</button>
                 </form>
+                <ShopResultsList results={this.state.businesses} />
             </div>
         );
     }
