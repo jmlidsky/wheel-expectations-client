@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "alias": "jilllidsky15-wheel-expectations-client",
+    "name": "wheel-expectations-client",
+    "routes": [
+      {
+        "src": "^/static/(.*)",
+        "dest": "/static/$1"
+      },
+      {
+        "src": ".*",
+        "dest": "/index.html"
+      }
+    ]
+  }
