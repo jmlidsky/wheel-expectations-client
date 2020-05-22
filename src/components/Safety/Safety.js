@@ -30,7 +30,7 @@ class Safety extends Component {
               <li>Inspect your bike to make certain all parts are working properly, especially your brakes.</li>
               <li>Check that the tires are inflated to the recommended pressure.</li>
               <li>Tuck and tie shoe laces and pant legs so they don't get caught in the bike chain.</li>
-              <li>Plan your route. Your safest route my be away from traffic, in a bike lane, or on a bike path.</li>
+              <li>Plan your route. Your safest route may be away from traffic, in a bike lane, or on a bike path.</li>
             </ul>
           </section>
           <section className="rules-of-the-road safety">
