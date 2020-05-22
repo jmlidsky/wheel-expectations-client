@@ -33,8 +33,8 @@ class App extends Component {
 
   componentDidMount() {
     Promise.all([
-      fetch(`${config.API_ENDPOINT}/api/bikes`),
-      fetch(`${config.API_ENDPOINT}/api/parts`)
+      fetch(`${config.API_ENDPOINT}/bikes`),
+      fetch(`${config.API_ENDPOINT}/parts`)
     ])
       .then(([bikesRes, partsRes]) => {
         if (!bikesRes.ok)
