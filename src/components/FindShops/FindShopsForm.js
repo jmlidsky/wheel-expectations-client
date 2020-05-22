@@ -4,7 +4,7 @@ import config from '../../config'
 import ShopResultsList from './ShopResultsList'
 import './FindShopsForm.css'
 
-const createURL = (location, sort_by) => {
+const createURL = (location) => {
     const address = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?";
     const url = `${address}term=bike+shop&location=${location}&radius=24140`;
     return url;
@@ -62,7 +62,8 @@ class FindShopsForm extends Component {
     }
 
     render() {
-        const isEnabled = this.state.location.length > 0
+        const { location } = this.state
+        const isEnabled = location.length > 0 && location.match(/^([a-zA-Z0-9]+)$/)
         return (
             <div className="find-shops-form-container">
                 <h2 className="find-shops-form-header">Find Shops Near You</h2>
