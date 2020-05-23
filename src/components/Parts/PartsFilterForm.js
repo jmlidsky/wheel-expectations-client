@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Context from '../../Context'
 import PartsFilterList from './PartsFilterList'
+import BIKE_PARTS from '../../images/bike_parts.jpg'
 import './PartsFilterForm.css';
 
 class PartsFilterForm extends Component {
@@ -28,7 +29,8 @@ class PartsFilterForm extends Component {
 
     return (
       <div className="parts-filter-form-container">
-        <h2 className="parts-filter-form-header">Bike Parts</h2>
+        <h2 className="parts-filter-form-header">Get to know your bike</h2>
+        <img src={BIKE_PARTS} alt="bike-parts" className="bike-parts-image" />
         <form className="parts-filter-form">
           <label htmlFor="filter by">Filter By</label>
           <select className="select-filter" onChange={e => this.handleStatusFilter(e.target.value)}>

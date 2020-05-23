@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import config from '../../config'
 import ShopResultsList from './ShopResultsList'
+import YELP_LOGO from '../../images/yelp_logo.png'
 import './FindShopsForm.css'
 
 const createURL = (location) => {
@@ -79,6 +80,10 @@ class FindShopsForm extends Component {
                     />
                     <button type="submit" className="search-button" disabled={!isEnabled}>Search</button>
                 </form>
+                <div>
+                <h4>Powered by</h4>
+                <img src={YELP_LOGO} alt="yelp-logo" className="yelp-logo-image"/>
+                </div>
                 <ShopResultsList results={this.state.businesses} />
             </div>
         );
