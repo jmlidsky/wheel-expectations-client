@@ -1,68 +1,60 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Wheel Expectations
 
-## Available Scripts
+[LIVE APP](https://wheel-expectations-client.now.sh/)
 
-In the project directory, you can run:
+## Summary
 
-### `npm start`
+This app was created to educate new and experienced riders: the rider who wants to find a list of local shops, the new rider that is looking for a new bike, but isn't informed about the rules of the road, and the experienced rider who needs to explain to a bike shop employee which part of their bike is malfunctioning.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## A Walk Through the App
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+**Home**
 
-### `npm test`
+![home page](images/home_screenshot.png)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Bike Info**
 
-### `npm run build`
+![bike info page](images/bike_info_screenshot.png)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Parts List**
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+![parts list page](images/parts_list_screenshot.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Safety & Etiquette**
 
-### `npm run eject`
+![safety & etiquette page](images/safety_screenshot.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Find Shops**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![find shops page](images/find_shops_screenshot.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## API Documentation
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**Request**
 
-## Learn More
+```bash
+GET https://damp-reaches-21503.herokuapp.com/api
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Endpoints**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Get a list of categorized bikes and their description.
 
-### Code Splitting
+```bash
+/bikes
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Get a list of essential and non-essential bike parts and their description.
 
-### Analyzing the Bundle Size
+```bash
+/parts
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Technologies
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* React
+* CSS
+* Node
+* Express
+* PostgreSQL
+* Yelp Fusion API
