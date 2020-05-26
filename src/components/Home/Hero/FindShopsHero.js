@@ -5,7 +5,7 @@ class FindShopsHero extends Component {
   render() {
     return (
       <Link to="/find-shops" className="hero-wrapper">
-        <h2>Find Shops</h2>
+        <h3>Find Shops</h3>
         <p>Search for a local shop near you.</p>
       </Link>
     );

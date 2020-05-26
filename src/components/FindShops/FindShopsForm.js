@@ -67,7 +67,7 @@ class FindShopsForm extends Component {
         const isEnabled = location.length > 0 && location.match(/^([a-zA-Z0-9]+)$/)
         return (
             <div className="find-shops-container">
-                <h3 className="find-shops-form-header">Find Shops Near You</h3>
+                <h2 className="find-shops-form-header">Find Shops Near You</h2>
                 <form className="find-shops-form" onSubmit={this.handleSubmit}>
                     <label htmlFor="enter your location" className="find-shops-label">Enter Your Location</label>
                     <input

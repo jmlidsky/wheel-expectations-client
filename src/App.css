@@ -15,7 +15,7 @@ main {
     padding: 80px 10px 0 10px;
 }
 
-h3 {
+h2 {
     margin-bottom: 20px;
     font-size: 1.5em;
     text-align: center;
@@ -27,7 +27,7 @@ h3 {
         padding: 100px 10px 0 10px;
     }
 
-    h3 {
+    h2 {
         font-size: 2em;
     }
 }

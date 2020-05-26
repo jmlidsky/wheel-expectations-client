@@ -5,7 +5,7 @@ class PartsHero extends Component {
   render() {
     return (
       <Link to="/parts" className="hero-wrapper">
-        <h2>Bike Parts</h2>
+        <h3>Bike Parts</h3>
         <p>Learn the technical jargon for basic bike parts.</p>
       </Link>
     );

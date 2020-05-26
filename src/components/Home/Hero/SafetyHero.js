@@ -5,7 +5,7 @@ class SafetyHero extends Component {
   render() {
     return (
       <Link to="/safety" className="hero-wrapper">
-        <h2>Safety & Etiquette</h2>
+        <h3>Safety & Etiquette</h3>
         <p>Tips & rules of the road as a bike commuter. </p>
       </Link>
     );

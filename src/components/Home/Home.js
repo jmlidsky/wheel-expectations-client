@@ -10,6 +10,8 @@ class Home extends Component {
     render() {
         return (
             <div className="home-container">
+                <h2 className="welcome-header">Welcome to Wheel Expectations!</h2>
+                <p className="welcome-description">Learn more about different types of bikes, their parts, and much more!</p>
                 <BikesHero />
                 <PartsHero />
                 <SafetyHero />

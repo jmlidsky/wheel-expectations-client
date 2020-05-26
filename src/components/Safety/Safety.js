@@ -5,7 +5,7 @@ class Safety extends Component {
   render() {
     return (
       <div className="safety-container">
-        <h3 className="safety-header">Safety & Etiquette</h3>
+        <h2 className="safety-header">Safety & Etiquette</h2>
         <div className="safety-section-container">
           <section className="safety-wrapper">
             <h4 className="safety-section-header">Helmets</h4>
