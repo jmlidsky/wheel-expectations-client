@@ -10,23 +10,23 @@ This app was created to educate new and experienced riders: the rider who wants 
 
 **Home**
 
-![home page](images/home_screenshot.png)
+![home page](src/images/home_screenshot.png)
 
 **Bike Info**
 
-![bike info page](images/bike_info_screenshot.png)
+![bike info page](src/images/bike_info_screenshot.png)
 
 **Parts List**
 
-![parts list page](images/parts_list_screenshot.png)
+![parts list page](src/images/parts_list_screenshot.png)
 
 **Safety & Etiquette**
 
-![safety & etiquette page](images/safety_screenshot.png)
+![safety & etiquette page](src/images/safety_screenshot.png)
 
 **Find Shops**
 
-![find shops page](images/find_shops_screenshot.png)
+![find shops page](src/images/find_shops_screenshot.png)
 
 ## API Documentation
 
