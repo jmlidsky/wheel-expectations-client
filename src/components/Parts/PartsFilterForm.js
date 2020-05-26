@@ -29,7 +29,7 @@ class PartsFilterForm extends Component {
 
     return (
       <div className="parts-filter-container">
-        <h3 className="parts-filter-form-header">Get to know your bike</h3>
+        <h3 className="parts-filter-form-header">Getting to Know Your Bike</h3>
         <div className="bike-parts-image-wrapper">
           <img src={BIKE_PARTS} alt="bike-parts" className="bike-parts-image" />
         </div>

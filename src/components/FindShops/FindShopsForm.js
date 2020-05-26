@@ -74,7 +74,7 @@ class FindShopsForm extends Component {
                         type="text"
                         name="find-shops"
                         className="find-shops-input"
-                        placeholder="City, State, or Zip Code"
+                        placeholder="City, State, or Zip"
                         onChange={this.handleLocationChange}
                         required
                     />
