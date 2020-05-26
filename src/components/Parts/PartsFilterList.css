@@ -1,27 +1,39 @@
 .parts-filter-list-item {
+    margin-bottom: 5px;
     padding: 5px 0px;
 }
 
 .part-name-button {
     margin-bottom: 5px;
-    border: 1px solid #e6e6e6;
-    padding: 8px;
-    width: 250px;
-    height: 40px;
-    background-color: white;
+    border-radius: 4px;
+    padding: 15px;
+    width: 100%;
+    background: linear-gradient(180.1deg, rgba(255, 255, 255, 0) 43.72%, rgba(0, 0, 0, 0.41) 99.1%), #7E053F;
+    color: white;
+    font-family: 'Oswald', sans-serif;
     font-size: .9em;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .part-name-button:hover {
-    border: 2px solid #e6e6e6;
+    background: white;
+    color: #7E053F;
 }
 
 .part-description {
-    font-size: .9em;
+    padding: 10px 20px;
+    font-size: 1em;
     line-height: 1.5em;
     margin-top: 5px;
     text-align: left;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .parts-filter-list-item {
+        width: 25%;
+        margin: 10px auto;
+    }
 }

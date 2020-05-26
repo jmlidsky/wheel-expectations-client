@@ -17,11 +17,11 @@ class BikeInfo extends Component {
             ? (
                 <div className="bike-info-container">
                     <div className="bike-info">
+                        <h4 className="bike-info-name">{selectedBike.bike_name}</h4>
                         <img src={selectedBike.bike_image} alt={selectedBike.bike_name} className="bike-image" />
-                        <h2>{selectedBike.bike_name}</h2>
-                        <p>{selectedBike.bike_description}</p>
+                        <p className="bike-description">{selectedBike.bike_description}</p>
                     </div>
-                    <div>
+                    <div className="button-wrapper">
                         <button type="button" className="go-back-button" onClick={() => this.props.history.goBack()}>Back to Guide</button>
                     </div>
                 </div>

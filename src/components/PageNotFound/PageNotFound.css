@@ -1,0 +1,18 @@
+.page-not-found {
+    color: white;
+    text-align: center;
+}
+
+.page-not-found h3 {
+    text-transform: uppercase;
+}
+
+.page-not-found p {
+    line-height: 1.5em;
+}
+
+@media (min-width: 768px) {
+    .page-not-found p {
+        font-size: 1.2em;
+    }
+}

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 class SafetyHero extends Component {
   render() {
     return (
-      <Link to="/safety" className="safety-hero">
+      <Link to="/safety" className="hero-wrapper">
         <h2>Safety & Etiquette</h2>
         <p>Tips & rules of the road as a bike commuter. </p>
       </Link>

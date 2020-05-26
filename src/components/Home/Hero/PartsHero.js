@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 class PartsHero extends Component {
   render() {
     return (
-      <Link to="/parts" className="parts-hero">
+      <Link to="/parts" className="hero-wrapper">
         <h2>Bike Parts</h2>
         <p>Learn the technical jargon for basic bike parts.</p>
       </Link>

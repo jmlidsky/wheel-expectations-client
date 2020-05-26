@@ -6,6 +6,28 @@
 }
 
 body {
-    font-family: 'Source Sans Pro', sans-serif;
-    margin: 10px;
+    font-family: 'Nunito', sans-serif;
+    background: #082B4A;
+    
+}
+
+main {
+    padding: 80px 10px 0 10px;
+}
+
+h3 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    main {
+        padding: 100px 10px 0 10px;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
 }

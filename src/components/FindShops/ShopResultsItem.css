@@ -1,15 +1,29 @@
 .shop-results-list-item {
-    margin-bottom: 5px;
-    border: 1px solid #e6e6e6;
-    padding: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 4px;
+}
+
+.shop-results-list-item p {
+    line-height: 1.5em;
 }
 
 a.shop-name {
-    color: black;
     text-decoration: none;
+    color: black;
+    margin: 10px 0px;
+    border-bottom: 3px solid black;
+    display: block;
+    padding-bottom: 10px;
+    font-size: 1.4em;
+    letter-spacing: 4px;
     font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 a.shop-name:hover {
-    color: blue;
+    color: #7E053F;
+    border-bottom: 3px solid #7E053F;
 }

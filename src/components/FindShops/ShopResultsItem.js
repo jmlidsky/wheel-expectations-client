@@ -8,15 +8,13 @@ class ShopResultsItem extends Component {
         // console.log(this.props.business)
         const { business } = this.props
         return (
-            <ul className="shop-results-list">
-                <li className="shop-results-list-item">
-                    <a href={business.url} className="shop-name" target="_blank" rel="noopener noreferrer">{business.name}</a>
-                    <p>{business.location.display_address[0]}</p>
-                    <p>{business.location.display_address[1]}</p>
-                    <p>{business.location.display_address[2]}</p>
-                    <div>{business.display_phone}</div>
-                </li>
-            </ul>
+            <div className="shop-results-list-item">
+                <a href={business.url} className="shop-name" target="_blank" rel="noopener noreferrer">{business.name}</a>
+                <p>{business.location.display_address[0]}</p>
+                <p>{business.location.display_address[1]}</p>
+                <p>{business.location.display_address[2]}</p>
+                <div>{business.display_phone}</div>
+            </div>
         );
     }
 }

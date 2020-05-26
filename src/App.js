@@ -64,9 +64,7 @@ class App extends Component {
       <div className="App">
         <Context.Provider value={contextValue}>
           <div className="content" aria-live="polite">
-            <header>
-              <Header />
-            </header>
+            <Header />
             <main className="main">
               <Switch>
                 <Route exact path="/" component={Home} />

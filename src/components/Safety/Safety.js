@@ -5,25 +5,25 @@ class Safety extends Component {
   render() {
     return (
       <div className="safety-container">
-        <h2 className="safety-header">Safety & Etiquette</h2>
+        <h3 className="safety-header">Safety & Etiquette</h3>
         <div className="safety-section-container">
-          <section className="helmets safety">
-            <h3>Helmets</h3>
+          <section className="safety-wrapper">
+            <h4 className="safety-section-header">Helmets</h4>
             <ul className="safety-list">
               <li>Always wear a <a href="https://www.youtube.com/watch?v=o61feDjSQ_0" target="_blank" rel="noopener noreferrer" className="link-target">properly fitted helmet</a> that has been certified by the Consumer Product Safety Commission (CPSC).</li>
               <li>Replace any helmet that is damaged or has been involved in a crash.</li>
             </ul>
           </section>
-          <section className="be-seen safety">
-            <h3>Be Seen</h3>
+          <section className="safety-wrapper">
+            <h4 className="safety-section-header">Be Seen</h4>
             <ul className="safety-list">
               <li>Wear neon, fluorescent, or bright colors when riding during the day or at night.</li>
               <li>If you plan to ride at night or when visibility is poor, wear something that reflects light.</li>
               <li>Your bike should also have a white front light that is visible from at least 500 feet and a red rear reflector.</li>
             </ul>
           </section>
-          <section className="before-heading-out safety">
-            <h3>Before Heading Out</h3>
+          <section className="safety-wrapper">
+            <h4 className="safety-section-header">Before Heading Out</h4>
             <ul className="safety-list">
               <li>Inspect your bike to make certain all parts are working properly, especially your brakes.</li>
               <li>Check that the tires are inflated to the recommended pressure.</li>
@@ -31,8 +31,8 @@ class Safety extends Component {
               <li>Plan your route. Your safest route may be away from traffic, in a bike lane, or on a bike path.</li>
             </ul>
           </section>
-          <section className="rules-of-the-road safety">
-            <h3>Rules of the Road</h3>
+          <section className="safety-wrapper">
+            <h4 className="safety-section-header">Rules of the Road</h4>
             <ul className="safety-list">
               <li>Bicyclists must obey all traffic signs, signals, lights, and markings.</li>
               <li>Ride on the right side of the road in the direction of traffic.</li>

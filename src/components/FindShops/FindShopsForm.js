@@ -66,10 +66,10 @@ class FindShopsForm extends Component {
         const { location } = this.state
         const isEnabled = location.length > 0 && location.match(/^([a-zA-Z0-9]+)$/)
         return (
-            <div className="find-shops-form-container">
-                <h2 className="find-shops-form-header">Find Shops Near You</h2>
+            <div className="find-shops-container">
+                <h3 className="find-shops-form-header">Find Shops Near You</h3>
                 <form className="find-shops-form" onSubmit={this.handleSubmit}>
-                    <label htmlFor="enter your location">Enter Your Location</label>
+                    <label htmlFor="enter your location" className="find-shops-label">Enter Your Location</label>
                     <input
                         type="text"
                         name="find-shops"
@@ -80,9 +80,9 @@ class FindShopsForm extends Component {
                     />
                     <button type="submit" className="search-button" disabled={!isEnabled}>Search</button>
                 </form>
-                <div>
-                <h4>Powered by</h4>
-                <img src={YELP_LOGO} alt="yelp-logo" className="yelp-logo-image"/>
+                <div className="yelp-logo-wrapper">
+                    <h4>Powered by</h4>
+                    <img src={YELP_LOGO} alt="yelp-logo" className="yelp-logo" />
                 </div>
                 <ShopResultsList results={this.state.businesses} />
             </div>

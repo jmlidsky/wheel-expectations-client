@@ -1,14 +1,61 @@
-img {
+.bike-info {
+    background: white;
+    border-radius: 4px;
+    padding: 15px 30px 30px 30px;
+}
+
+.bike-image{
+    margin: 10px 0px;
     width: 100%;
+}
+
+.bike-info-name {
+    color: #7E053F;
+    margin: 20px 0;
+    border-bottom: 3px solid #7E053F;
+    padding-bottom: 20px;
+    font-size: 1.4em;
+    letter-spacing: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.bike-description {
+    line-height: 1.5em;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
 .go-back-button {
     margin: 20px 0px;
-    border: 1px solid #e6e6e6;
-    padding: 8px;
-    background-color: white;
+    border-radius: 4px;
+    padding: 20px;
+    background: linear-gradient(180.1deg, rgba(255, 255, 255, 0) 43.72%, rgba(0, 0, 0, 0.41) 99.1%), #7E053F;
+    color: white;
+    font-family: 'Oswald', sans-serif;
     font-size: .9em;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+.go-back-button:hover {
+    background: white;
+    color: #7E053F;
+}
+
+@media (min-width: 768px) {
+    .bike-info-container {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    .go-back-button {
+        width: 50%;
+        margin: 20px auto;
+    }
 }

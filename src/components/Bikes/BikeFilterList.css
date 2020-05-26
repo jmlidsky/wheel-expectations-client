@@ -5,25 +5,41 @@
 }
 
 .bike-filter-list-item {
-    margin-bottom: 5px;
-    border: 1px solid #e6e6e6;
+    margin: 10px;
+    border-radius: 4px;
+    background: linear-gradient(180.1deg, rgba(255, 255, 255, 0) 43.72%, rgba(0, 0, 0, 0.41) 99.1%), #7E053F;
 }
 
 a.bike-name {
-    height: 100px;
+    font-family: 'Oswald', sans-serif;
+    height: 80px;
     padding: 5px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: .9em;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
+.bike-filter-list-item:hover {
+    background: white;
+}
+
 a.bike-name:hover {
-    border: 2px solid #e6e6e6;
+    color: #7E053F;
+}
+
+@media (min-width: 768px) {
+    .bike-filter-list-item {
+        width: 40%;
+        margin: 10px auto;
+    }
+    a.bike-name {
+        font-size: 1.2em;
+    }
 }

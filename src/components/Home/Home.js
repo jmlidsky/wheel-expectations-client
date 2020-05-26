@@ -10,19 +10,11 @@ class Home extends Component {
     render() {
         return (
             <div className="home-container">
-                <section className="hero">
-                    <BikesHero />
-                </section>
-                <section className="hero">
-                    <PartsHero />
-                </section>
-                <section className="hero">
-                    <SafetyHero />
-                </section>
-                <section className="hero">
-                    <FindShopsHero />
-                </section>
-            </div>
+                <BikesHero />
+                <PartsHero />
+                <SafetyHero />
+                <FindShopsHero />
+           </div>
         );
     }
 }

@@ -28,11 +28,13 @@ class PartsFilterForm extends Component {
     })
 
     return (
-      <div className="parts-filter-form-container">
-        <h2 className="parts-filter-form-header">Get to know your bike</h2>
-        <img src={BIKE_PARTS} alt="bike-parts" className="bike-parts-image" />
+      <div className="parts-filter-container">
+        <h3 className="parts-filter-form-header">Get to know your bike</h3>
+        <div className="bike-parts-image-wrapper">
+          <img src={BIKE_PARTS} alt="bike-parts" className="bike-parts-image" />
+        </div>
         <form className="parts-filter-form">
-          <label htmlFor="filter by">Filter By</label>
+          <label htmlFor="filter by" className="parts-filter-label">Filter By</label>
           <select className="select-filter" onChange={e => this.handleStatusFilter(e.target.value)}>
             <option value="Essential">Essential Parts</option>
             <option value="Optional">Non-Essential Parts</option>

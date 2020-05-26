@@ -1,20 +1,37 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import Nav from './Nav/Nav'
-import './Header.css'
+import './Header.css';
 
 class Header extends Component {
-  render() {
-    return (
-      <div className="header">
-          <h1>
-              <Link to="/" className="title">Wheel Expectations</Link>
-          </h1>
-          <h2>A place to educate yourself about bikes & bike safety.</h2>
-          <Nav />
-      </div>
-    );
-  }
+    render() {
+        return (
+            <header className="header">
+                <h1>
+                    <Link to="/" className="logo">Wheel Expectations</Link>
+                </h1>
+                <input type="checkbox" id="nav-toggle" className="nav-toggle" />
+                    <nav>
+                        <ul className="nav-list menu nav">
+                            <li>
+                                <Link to="/bikes" className="nav-link">Bike Guide</Link>
+                            </li>
+                            <li>
+                                <Link to="/parts" className="nav-link">Bike Parts</Link>
+                            </li>
+                            <li>
+                                <Link to="/safety" className="nav-link">Safety & Etiquette</Link>
+                            </li>
+                            <li>
+                                <Link to="/find-shops" className="nav-link">Find Shops</Link>
+                            </li>
+                        </ul>
+                    </nav>
+                    <label htmlFor="nav-toggle" className="nav-toggle-label">
+                        <span></span>
+                    </label>
+            </header>
+        );
+    }
 }
 
 export default Header;

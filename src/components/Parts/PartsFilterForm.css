@@ -1,13 +1,40 @@
-.parts-filter-form-header {
-    margin: 10px 0px;
+.bike-parts-image {
+    border-radius: 4px;
+    padding: 1px;
+    background: white;
+    width: 100%;
 }
 
 .parts-filter-form {
     margin-bottom: 10px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.parts-filter-label {
+    padding: 20px 0px 5px 0px;
+    font-size: 1.2em;
 }
 
 .select-filter {
-    margin: 0px 5px;
-    border: 1px solid #e6e6e6;
-    width: 150px;
+    margin-bottom: 20px;
+    border: 1.5px solid white;
+    border-radius: 4px;
+    padding-left: 5px;
+    width: 200px;
+    height: 30px;
+    background: white;
+    align-self: center;
+    font-size: 18px;
+}
+
+@media (min-width: 768px) {
+    .bike-parts-image-wrapper {
+        text-align: center;
+    }
+    .bike-parts-image {
+        width: 40%;
+    }
 }
