@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Context from '../../Context'
 import PartsFilterList from './PartsFilterList'
 import BIKE_PARTS from '../../images/bike_parts.jpg'
-import './PartsFilterForm.css';
+import './PartsFilterForm.css'
 
 class PartsFilterForm extends Component {
   static contextType = Context

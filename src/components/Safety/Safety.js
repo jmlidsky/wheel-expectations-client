@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import './Safety.css';
+import React, { Component } from 'react'
+import './Safety.css'
 
 class Safety extends Component {
   render() {

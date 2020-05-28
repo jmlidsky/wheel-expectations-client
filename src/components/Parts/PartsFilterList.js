@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Context from '../../Context'
 import './PartsFilterList.css'
 

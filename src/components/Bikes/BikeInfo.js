@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Context from '../../Context'
-import './BikeInfo.css';
+import './BikeInfo.css'
 
 class BikeInfo extends Component {
     static contextType = Context

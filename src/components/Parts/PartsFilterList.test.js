@@ -1,7 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
-import PartsFilterList from './PartsFilterList';
+import PartsFilterList from './PartsFilterList'
 
 it('renders without crashing', () => {
     const filteredParts = []

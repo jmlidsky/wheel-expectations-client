@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 import ShopResultsItem from './ShopResultsItem'
 import './ShopResultsList.css'

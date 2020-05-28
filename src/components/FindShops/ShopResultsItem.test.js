@@ -1,7 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
-import ShopResultsItem from './ShopResultsItem';
+import ShopResultsItem from './ShopResultsItem'
 
 it('renders without crashing', () => {
     const business = {}

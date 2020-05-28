@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Context from '../../Context'
 import BikeFilterList from './BikeFilterList'
-import './BikeFilterForm.css';
+import './BikeFilterForm.css'
 
 class BikeFilterForm extends Component {
   static contextType = Context

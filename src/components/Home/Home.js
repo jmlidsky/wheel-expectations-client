@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import BikesHero from './Hero/BikesHero'
 import PartsHero from './Hero/PartsHero'
 import SafetyHero from './Hero/SafetyHero'
