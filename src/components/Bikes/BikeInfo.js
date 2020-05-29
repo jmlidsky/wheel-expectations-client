@@ -11,7 +11,7 @@ class BikeInfo extends Component {
         const selectedBike = bikes.find(bike => {
             return bike.id === bikeId
         })
-
+        
         // null check
         return selectedBike
             ? (
