@@ -24,8 +24,8 @@ class BikeFilterForm extends Component {
         <h2 className="bike-filter-form-header">Find a Bike That’s Right for You</h2>
         <form className="bike-filter-form">
           <label htmlFor="select a category" className="bike-filter-label">Select a Category</label>
-          <select className="select-category" onChange={e => this.context.setCategory(e.target.value)}>
-            <option disabled selected value=" "></option>
+          <select className="select-category" defaultValue="" onChange={e => this.context.setCategory(e.target.value)}>
+            <option disabled value=""></option>
             <option value="Road">Road</option>
             <option value="Mountain">Mountain</option>
             <option value="Hybrid">Hybrid</option>
