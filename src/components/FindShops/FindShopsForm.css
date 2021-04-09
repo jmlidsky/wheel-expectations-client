@@ -11,7 +11,6 @@
 }
 
 .find-shops-input, .search-button {
-    margin-bottom: 10px;
     border-radius: 4px;
     background: white;
     align-self: center;
@@ -19,14 +18,19 @@
 }
 
 .find-shops-input {
-    padding-left: 5px;
-    width: 200px;
-    height: 30px;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 250px;
+    height: 40px;
+}
+
+.find-shops-input:placeholder {
+    font-size: 18px;
 }
 
 .search-button {
     padding: 10px;
-    width: 200px;
+    width: 180px;
     background: linear-gradient(180.1deg, rgba(255, 255, 255, 0) 43.72%, rgba(0, 0, 0, 0.41) 99.1%), #7E053F;
     color: white;
     font-family: 'Oswald', sans-serif;
@@ -51,5 +55,5 @@
 }
 
 .yelp-logo {
-    max-width: 100px;
+    max-width: 70px;
 }

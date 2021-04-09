@@ -22,8 +22,8 @@ h2 {
     color: white;
 }
 
-a:focus, button:focus  {
-    outline: none;
+a:focus, button:focus, input:focus, select:focus  {
+    outline: 0px;
 }
 
 @media (min-width: 768px) {
