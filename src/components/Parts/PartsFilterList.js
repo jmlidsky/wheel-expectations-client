@@ -19,7 +19,7 @@ class PartsFilterList extends Component {
   renderPart(part, index, currentPartIndex) {
     return (
       <div className="parts-filter-list-item" key={part.id}>
-        <button className="part-name-button" key={index} onClick={() => this.handleButtonClick(index)}>
+        <button className="part-name" key={index} onClick={() => this.handleButtonClick(index)}>
           {part.part_name}
         </button>
         {(currentPartIndex === index) && <div className="part-description">{part.part_description}</div>}
@@ -31,11 +31,21 @@ class PartsFilterList extends Component {
     const { currentPartIndex } = this.state
 
     return (
-      <div className="parts-filter-list-container">
-        {this.props.filteredParts.map((part, index) =>
-          this.renderPart(part, index, currentPartIndex)
-        )}
-      </div>
+      <>
+        <div className="mobile">
+          {this.props.filteredParts.map((part, index) =>
+            this.renderPart(part, index, currentPartIndex)
+          )}
+        </div>
+        <div className="tab-desk">
+          {this.props.filteredParts.map((part) =>
+            <div className="part-wrapper">
+              <div className="part-name">{part.part_name}</div>
+              <div className="part-description">{part.part_description}</div>
+            </div>
+          )}
+        </div>
+      </>
     )
   }
 }

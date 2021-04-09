@@ -1,13 +1,15 @@
 .parts-filter-list-item {
     margin-bottom: 5px;
     padding: 5px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.part-name-button {
+.part-name {
     margin-bottom: 5px;
     border-radius: 4px;
     padding: 15px;
-    width: 100%;
     background: linear-gradient(180.1deg, rgba(255, 255, 255, 0) 43.72%, rgba(0, 0, 0, 0.41) 99.1%), #7E053F;
     color: white;
     font-family: 'Oswald', sans-serif;
@@ -17,7 +19,11 @@
     text-transform: uppercase;
 }
 
-.part-name-button:hover {
+.mobile .part-name, .mobile .part-description {
+    width: 85%;
+}
+
+button.part-name:hover {
     background: white;
     color: #7E053F;
 }
@@ -31,9 +37,23 @@
     color: white;
 }
 
+.tab-desk {
+    display: none;
+}
+
 @media (min-width: 768px) {
-    .parts-filter-list-item {
-        width: 25%;
-        margin: 10px auto;
+    .mobile {
+        display: none;
+    }
+    .tab-desk {
+        display: flex;
+        flex-direction: row;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    .part-wrapper {
+        padding: 15px 30px;
+        width: 300px;
+        color: white;
     }
 }
