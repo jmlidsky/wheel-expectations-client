@@ -22,6 +22,10 @@ h2 {
     color: white;
 }
 
+a:focus, button:focus  {
+    outline: none;
+}
+
 @media (min-width: 768px) {
     main {
         padding: 100px 10px 0 10px;
