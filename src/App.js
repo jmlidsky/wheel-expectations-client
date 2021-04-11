@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 import Context from './Context'
 import config from './config'
 // import DATA from './DummyData'
-import Header from './components/Header/Header'
+import Nav from './components/Nav/Nav'
 import Home from './components/Home/Home'
 import BikeFilterForm from './components/Bikes/BikeFilterForm'
 import BikeInfo from './components/Bikes/BikeInfo'
@@ -59,12 +59,14 @@ class App extends Component {
       setCategory: this.setCategory,
       category: this.state.category,
     }
-    
+
     return (
       <div className="App">
         <Context.Provider value={contextValue}>
           <div className="content" aria-live="polite">
-            <Header />
+            <header>
+              <Nav />
+            </header>
             <main className="main">
               <Switch>
                 <Route exact path="/" component={Home} />
