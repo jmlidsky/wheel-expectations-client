@@ -12,7 +12,7 @@ body {
 }
 
 main {
-    padding: 80px 10px 0 10px;
+    margin: 30px 10px;
 }
 
 h2 {
@@ -28,7 +28,7 @@ a:focus, button:focus, input:focus, select:focus  {
 
 @media (min-width: 768px) {
     main {
-        padding: 100px 10px 0 10px;
+        margin: 40px 0
     }
 
     h2 {
