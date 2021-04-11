@@ -34,7 +34,7 @@ h3 {
 }
 
 .hero-wrapper:hover {
-    outline: 1px solid white;
+ box-shadow: 0 0 2px 2px white;
 }
 
 .hero-wrapper p {
